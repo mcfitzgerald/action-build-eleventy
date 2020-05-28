@@ -1310,7 +1310,7 @@ function build() {
     return __awaiter(this, void 0, void 0, function* () {
         const path = core.getInput('path', { required: true });
         try {
-            yield exec.exec(`npx eleventy ${path}`);
+            yield exec.exec(`npx @11ty/eleventy ${path}`);
         }
         catch (error) {
             core.setFailed(error.message);
