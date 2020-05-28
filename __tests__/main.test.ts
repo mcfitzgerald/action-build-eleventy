@@ -1,5 +1,4 @@
-import {build} from '../src/build'
-
-test('can we build it', async () => {
-  await build()
+/* eslint-disable no-console */
+test('simple case', () => {
+  console.log('that was simple')
 })
