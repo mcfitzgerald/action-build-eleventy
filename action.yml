@@ -1,10 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Build 11ty'
+description: 'Assumes repo is a static site directory and build it with 11ty'
+author: 'Mike Fitzgerald'
 inputs:
   path:
-    description: 'site directory (11ty will compile what is whithin directory)'
-    default: './'
+    description: 'Static site directory (11ty will compile what is whithin directory).'
+    default: '$GITHUB_WORKSPACE'
     required: true
 runs:
   using: 'node12'
