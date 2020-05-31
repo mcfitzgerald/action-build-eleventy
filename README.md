@@ -1,8 +1,8 @@
 # Build a static site using 11ty
 
-This action will run 11ty on a directory of your choice. The default directory is the ```$GITHUB_WORKSPACE``` instantiated when using ```actions/checkout```
+This actions builds a static site using 11ty (eleventy: https://www.11ty.dev/) from the contents of a repository. It assumes that the repository root is the site source, but this can be configured in the workflow. It is intended to be coupled with other actions in the workflow that push the built site to a cdn or webserver. An example workflow shows how to push the built site to google storage.
 
-The action is not much good on its own as it builds the site on an ephemeral runner. It is intended be used in a workflow that also handles shipping the built site to web server or CDN.
+The default build directory is the ```$GITHUB_WORKSPACE``` instantiated when using ```actions/checkout```.
 
 ```yaml
 name: "build-site"
@@ -28,7 +28,6 @@ jobs:
 
 ```
 
-While I wrote the action, the project template is a complete rip from the template made available at: https://github.com/actions/typescript-action.git
+While I wrote the action, the project template is a complete rip from the template made available at: https://github.com/actions/typescript-action.git.
 
-The build-test workflow is accurate and tests whether or not 11ty tries to build this action's repo. The test ins __tests__ is a dummy.  
-
+The build-test workflow is accurate and tests whether or not 11ty tries to build this action's repo. The test in `__tests__` is a dummy.  
